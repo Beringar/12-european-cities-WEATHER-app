@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>BERINGAR WEATHER</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="jquery-ui-1.12.1.beringarweather/jquery-ui.min.css">
+	<link rel="stylesheet" href="jquery-ui-1.12.1.beringarweather/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="jquery-ui-1.12.1.beringarweather/jquery-ui.theme.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,300i,400,500,600,700,800,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="jquery-ui-1.12.1.beringarweather/jquery-ui.min.js"></script>
+
+
+	<!--
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+-->
+
+	<script src="jquery.ui.touch-punch.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container-fluid mainwrapper">
+		<div class="row">
+			<div class="col-sm-12">
+
+				<div class="topbanner">
+					<span>12 cities.&nbsp;&nbsp;</span><span class="title_desired">Your desired weather.&nbsp;&nbsp;</span> <span>The perfect choice!</span>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row prefs_tab">
+			<div class="col-sm-12">
+
+				<div class="col-sm-2 whenDiv">
+					
+						<div class="ui-widget-content whenQuestion">
+							<h6>My travel is...</h6>
+						</div>
+						<div id="when0" class="ui-widget-content draggable when">
+							<h5>Today!</h5>
+						</div>
+						<div id="when1" class="ui-widget-content draggable when">
+							<h5>Tomorrow</h5>
+						</div>
+						<div id="when2" class="ui-widget-content draggable when">
+							<h5>In 2 days</h5>
+						</div>
+						<div id="when3" class="ui-widget-content draggable when">
+							<h5>In 3 days</h5>
+						</div>
+						<div id="when4" class="ui-widget-content draggable when">
+							<h5>In 4 days</h5>
+						</div>
+					
+				</div>
+				<div class="col-sm-5">
+
+					<div id="droppable" class="ui-widget-header">
+						<h4 id="userMsg" class="prefMessage alert">Drop your preferences here!</h4>
+
+
+						<div class="prefLabel">
+							<span>Travel date:</span><br><span class="choiceLabel" id="desiredWhenMsg">?</span><br>
+							<span>Desired Temperature:</span><br><span class="choiceLabel" id="desiredTempMsg">?</span><br>
+							<span>Desired Sky Condition:</span><br><span class="choiceLabel" id="desiredSkyMsg">?</span>
+						</div>
+
+
+
+
+
+						<!--
+						<h4 id="desiredWhenMsg">Drop your travel's date</h4>
+						<h4 id="desiredTempMsg">Drop your desired temperature</h4>
+						<h4 id="desiredSkyMsg">Drop your weather condition</h4>
+-->
+						<!--						<button id="buttonFind" class="ui-button ui-widget ui-corner-all">DISCOVER MY DESTINATIONS!</button>-->
+					</div>
+
+				</div>
+				<div class="col-sm-3 tempDiv">
+
+
+					<div class="ui-widget-content tempQuestion">
+						<h6>Desired temperature</h6>
+					</div>
+					<div id="temp3" class="draggable temp">
+						<img src="imgs/temp3.png">Hot! more than 23&deg;...
+					</div>
+
+					<div id="temp2" class="draggable temp">
+						<img src="imgs/temp2.png">Temperate 16-22&deg;
+					</div>
+
+
+					<div id="temp1" class="draggable temp">
+						<img src="imgs/temp1.png">Cold 8-15&deg;
+					</div>
+
+					<div id="temp0" class="draggable temp">
+						<img src="imgs/temp0.png">Very Cold! less than 8&deg;
+					</div>
+
+				</div>
+
+				<div class="col-sm-2 skyDiv">
+					<div class="ui-widget-content tempQuestion">
+						<h6>Desired sky condition</h6>
+					</div>
+					<div id="sky1" class="draggable sky">
+						<img src="imgs/sky1.png">Clear
+					</div>
+					<div id="sky0" class="draggable sky">
+						<img src="imgs/sky0.png">Rain
+					</div>
+					<div id="sky2" class="draggable sky">
+						<img src="imgs/sky2.png">Clouds
+					</div>
+					<div id="sky3" class="draggable sky">
+						<img src="imgs/sky3.png">Snow
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+		</div>
+		<hr class="divider_yellow">
+		<div class="row">
+
+			<div class="col-sm-12">
+
+
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city0" class="flipper">
+							<div id="cityFront0" class="front">
+
+							</div>
+							<div id="cityBack0" class="back">
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city1" class="flipper">
+							<div id="cityFront1" class="front">
+
+							</div>
+							<div id="cityBack1" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city2" class="flipper">
+							<div id="cityFront2" class="front">
+
+							</div>
+							<div id="cityBack2" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city3" class="flipper">
+							<div id="cityFront3" class="front">
+
+							</div>
+							<div id="cityBack3" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city4" class="flipper">
+							<div id="cityFront4" class="front">
+
+							</div>
+							<div id="cityBack4" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city5" class="flipper">
+							<div id="cityFront5" class="front">
+
+							</div>
+							<div id="cityBack5" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city6" class="flipper">
+							<div id="cityFront6" class="front">
+
+							</div>
+							<div id="cityBack6" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city7" class="flipper">
+							<div id="cityFront7" class="front">
+
+							</div>
+							<div id="cityBack7" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city8" class="flipper">
+							<div id="cityFront8" class="front">
+
+							</div>
+							<div id="cityBack8" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city9" class="flipper">
+							<div id="cityFront9" class="front">
+
+							</div>
+							<div id="cityBack9" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city10" class="flipper">
+							<div id="cityFront10" class="front">
+
+							</div>
+							<div id="cityBack10" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="flip-container">
+						<div id="city11" class="flipper">
+							<div id="cityFront11" class="front">
+
+							</div>
+							<div id="cityBack11" class="back">
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+<div class="row">
+			<div class="col-sm-12">
+
+				<div class="bottombanner">
+					<span>&copy; 2018 </span><span class="title_desired">beminuscula </span> <span>at Ubiqum Code Academy</span>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>

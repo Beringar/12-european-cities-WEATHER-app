@@ -1,0 +1,389 @@
+    .alert-success {
+    	color: #ffc800;
+    	background-color: #333;
+    	border-color: #333;
+    }
+
+    #resetButton {
+    	border-radius: 8px;
+    	padding: 5px 10px 5px 10px;
+    	color: #333;
+    	font-size: 0.8em;
+    	font-weight: 400;
+    	background-color: #f1f3f7;
+    }
+
+
+    .topbanner {
+    	text-align: center;
+    	font-family: 'Raleway', sans-serif;
+    	font-weight: 100;
+    	background-color: #333;
+    	font-size: 2.2em;
+    	color: white;
+    	padding: 3px;
+    	margin-top: 10px;
+    }
+
+    .ui-widget-header {
+    	border: none;
+    	background: #dfe6e9;
+    }
+
+    .ui-state-active {
+    	border: none;
+    	background: #fdcb6e;
+    }
+
+    .bottombanner {
+    	text-align: center;
+    	font-family: 'Raleway', sans-serif;
+    	font-weight: 100;
+    	background-color: #333;
+    	font-size: 1em;
+    	color: white;
+    	padding: 3px;
+    }
+
+    .title_desired {
+    	color: #ffc800;
+    	font-weight: 600;
+    }
+
+    img {
+    	height: 100%;
+    }
+
+
+    #droppable {
+    	width: 100%;
+    	height: 240px;
+    	padding: 0.5em;
+    	text-align: center;
+    	font-family: 'Raleway', sans-serif;
+    	color: #333;
+
+
+    }
+
+    .draggable {
+    	width: 100%;
+    	height: 80px;
+    	padding: 0.5em;
+    	cursor: url('imgs/grab.png'), auto;
+    	font-family: 'Raleway', sans-serif;
+    	background: none;
+    	border: none;
+
+    }
+
+    .ui-draggable-dragging {
+    	cursor: url('imgs/grabbing.png'), auto;
+    }
+
+    .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6 {
+    	padding-right: 0;
+    	padding-left: 0;
+    }
+
+    .prefLabel {
+    	font-weight: 400;
+    	/*	text-align: left;*/
+    	padding: 0;
+    }
+
+    .choiceLabel {
+    	font-size: 1.5em;
+    	font-weight: 400;
+    	font-family: 'Courgette', cursive;
+    }
+
+    .divider_yellow {
+    	margin-top: 0;
+    	margin-bottom: 0;
+    	border: 0;
+    	border-top: 1px solid #ddd;
+    }
+
+
+    .titleDroppable {
+    	font-family: 'Courgette', cursive;
+
+    }
+
+    .prefs_tab {}
+
+    .prefMessage {
+    	font-weight: 500;
+
+    }
+
+    .whenDiv {
+    	background-color: #f1f2f6;
+
+    }
+
+    .tempDiv {
+    	background-color: #f1f2f6;
+
+    }
+
+    .skyDiv {
+    	background-color: #fbfbff;
+
+    }
+
+    .whenQuestion,
+    .tempQuestion,
+    .skyQuestion {
+
+    	font-family: 'Raleway', sans-serif;
+    	text-transform: uppercase;
+    	font-weight: 100;
+    	text-align: center;
+    	height: 24px;
+    	border: none;
+    	padding-top: 2px;
+    	background: none;
+
+    }
+
+    .when {
+
+    	font-family: 'Courgette', cursive;
+    	text-align: center;
+    	height: 43.2px;
+    	border: none;
+
+    }
+
+    .temp {
+
+    	font-family: 'Courgette', cursive;
+    	height: 54px;
+    }
+
+    .sky {
+
+    	font-family: 'Courgette', cursive;
+    	height: 54px;
+    }
+
+    @-webkit-keyframes blinker {
+    	from {
+    		opacity: 1.0;
+    	}
+    	to {
+    		opacity: 0;
+    	}
+    }
+
+    .blink {
+    	text-decoration: blink;
+    	-webkit-animation-name: blinker;
+    	-webkit-animation-duration: 1.2s;
+    	-webkit-animation-iteration-count: infinite;
+    	-webkit-animation-timing-function: ease-in-out;
+    	-webkit-animation-direction: alternate;
+    }
+
+
+    .flip-container {
+    	-webkit-perspective: 1000;
+    	width: 100%;
+    	/*	padding: 0.5px;*/
+    	/*	cursor: pointer;*/
+    }
+
+    .flipper {
+    	transition: 0.6s;
+    	-webkit-transform-origin: 100% 50%;
+    	-webkit-transform-style: preserve-3d;
+    	position: relative;
+    	height: 200px;
+    }
+
+    .on {
+    	-webkit-transform: rotateX(-180deg);
+    }
+
+    .off {
+    	-webkit-transform: rotateX(0deg);
+    }
+
+    .front,
+    .back {
+    	width: 100%;
+    	height: 200px;
+    	position: absolute;
+    	-webkit-backface-visibility: hidden;
+
+    	/*	text-shadow: 1px 1px #000;*/
+    	font-family: 'Raleway', sans-serif;
+    	font-size: 1.7em;
+    	line-height: 200px;
+    	text-align: center;
+    }
+
+    .back {
+    	color: white;
+    }
+
+    .front {
+    	/*	background: #2ecc71;*/
+    	text-shadow: 1px 1px #000;
+    	font-family: 'Raleway', sans-serif;
+    	color: #ffffff;
+    	font-weight: 700;
+    	opacity: 0.5;
+    }
+
+    .flip-container .back {
+    	/*	background: #3498db;*/
+    	-webkit-transform: rotateX(180deg);
+    }
+
+    .barcelonaFront {
+    	background-image: url("citiesimg/bcn_front.jpg");
+    	background-size: cover;
+    }
+
+    .barcelonaBack {
+    	background-image: url("citiesimg/bcn_back.jpg");
+    	background-size: cover;
+    }
+
+    .madridFront {
+    	background-image: url("citiesimg/mad_front.jpg");
+    	background-size: cover;
+    }
+
+    .madridBack {
+    	background-image: url("citiesimg/mad_back.jpg");
+    	background-size: cover;
+    }
+
+    .berlinFront {
+    	background-image: url("citiesimg/berlin_front.jpg");
+    	background-size: cover;
+    }
+
+    .berlinBack {
+    	background-image: url("citiesimg/berlin_back.jpg");
+    	background-size: cover;
+    }
+
+    .warsawFront {
+    	background-image: url("citiesimg/warsaw_front.jpg");
+    	background-size: cover;
+    }
+
+    .warsawBack {
+    	background-image: url("citiesimg/warsaw_back.jpg");
+    	background-size: cover;
+    }
+
+    .amsterdamFront {
+    	background-image: url("citiesimg/amsterdam_front.jpg");
+    	background-size: cover;
+    }
+
+    .amsterdamBack {
+    	background-image: url("citiesimg/amsterdam_back.jpg");
+    	background-size: cover;
+    }
+
+    .londonFront {
+    	background-image: url("citiesimg/london_front.jpg");
+    	background-size: cover;
+    }
+
+    .londonBack {
+    	background-image: url("citiesimg/london_back.jpg");
+    	background-size: cover;
+    }
+
+    .parisFront {
+    	background-image: url("citiesimg/paris_front.jpg");
+    	background-size: cover;
+    }
+
+    .parisBack {
+    	background-image: url("citiesimg/paris_back.jpg");
+    	background-size: cover;
+    }
+
+    .romeFront {
+    	background-image: url("citiesimg/rome_front.jpg");
+    	background-size: cover;
+    }
+
+    .romeBack {
+    	background-image: url("citiesimg/rome_back.jpg");
+    	background-size: cover;
+    }
+
+    .lisbonFront {
+    	background-image: url("citiesimg/lisbon_front.jpeg");
+    	background-size: cover;
+    }
+
+    .lisbonBack {
+    	background-image: url("citiesimg/lisbon_back.jpg");
+    	background-size: cover;
+    }
+
+    .dublinFront {
+    	background-image: url("citiesimg/dublin_front.jpg");
+    	background-size: cover;
+    }
+
+    .dublinBack {
+    	background-image: url("citiesimg/dublin_back.jpg");
+    	background-size: cover;
+    }
+
+    .viennaFront {
+    	background-image: url("citiesimg/vienna_front.jpg");
+    	background-size: cover;
+    }
+
+    .viennaBack {
+    	background-image: url("citiesimg/vienna_back.jpg");
+    	background-size: cover;
+    }
+
+    .brusselsFront {
+    	background-image: url("citiesimg/brussels_front.jpg");
+    	background-size: cover;
+    }
+
+    .brusselsBack {
+    	background-image: url("citiesimg/brussels_back.jpg");
+    	background-size: cover;
+    }
+
+    .weatherInfo {
+    	background-color: rgba(0, 0, 0, 0.5);
+    	margin-top: 20px;
+    }
+
+    .weatherInfo h3,
+    .weatherInfo h4,
+    .weatherInfo h5 {
+    	font-weight: 100;
+    }
+
+    .titleCityBack {
+    	font-size: 28px;
+		padding-top: 4px;
+    }
+
+.weatherDescriptor {
+	padding-bottom: 4px;
+}
+
+    .alert {
+    	padding: 8px;
+    	margin-bottom: 10px
+    }
